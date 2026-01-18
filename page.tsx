@@ -343,7 +343,7 @@ export default function DyzgoFinalVFinal() {
                      <motion.div whileHover={{ y: -10 }} className="w-full max-w-sm glass-panel rounded-2xl md:rounded-[2rem] p-4 md:p-8 shadow-2xl border border-white/20 backdrop-blur-3xl bg-white/[0.05] scale-75 md:scale-100">
                          <div className="flex items-center gap-3 md:gap-4 mb-3 md:mb-8">
                             <div className="w-10 h-10 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-neonPink to-neonPurple p-[2px] relative flex-shrink-0">
-                                <div className="w-full h-full rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center overflow-hidden"><Crown size={18} className="text-white md:w-8 md:h-8" /></div>
+                               <div className="w-full h-full rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center overflow-hidden"><Crown size={18} className="text-white md:w-8 md:h-8" /></div>
                             </div>
                             <div><div className="text-base md:text-2xl font-bold text-white">Party King</div><div className="text-neonPink font-bold tracking-widest text-[9px] md:text-xs">LEVEL 12 VIP</div></div>
                          </div>
@@ -434,7 +434,7 @@ export default function DyzgoFinalVFinal() {
                  <button className="w-auto glass-panel text-white px-5 py-2.5 md:px-12 md:py-6 rounded-full font-bold text-xs md:text-xl hover:bg-white/10 transition-colors flex items-center gap-2 md:gap-3 justify-center border border-white/20"><Play size={14} className="fill-white md:w-6 md:h-6"/> Google Play</button>
              </div>
              
-             {/* SIGNATURES - FIRMAS TIPOGRÁFICAS ANIMADAS (SIN BLOQUE DE LUZ) */}
+             {/* SIGNATURES - FIRMAS RÁPIDAS (CORREGIDO) */}
              <div className="mb-12 flex flex-col items-center justify-center gap-3 md:gap-4">
                 <span className="text-[9px] md:text-[10px] text-white/30 uppercase tracking-[0.2em]">Founders</span>
                 <div className="flex flex-row items-center gap-8 md:gap-16">
