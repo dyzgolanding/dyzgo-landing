@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #000000;
+  --foreground: #ffffff;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 0px; background: transparent; }
+
+/* --- FONDO LÍQUIDO CORREGIDO (SOLO PURPLE/PINK/CYAN) --- */
+.fluid-container {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  z-index: 0;
+  background: #000;
+  filter: contrast(150%) brightness(100%);
+  pointer-events: none;
+}
+
+.fluid-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.6;
+  animation: blob 25s infinite alternate;
+}
+
+/* --- CRISTAL LÍQUIDO UNIFICADO --- */
+/* Se usará tanto para usuarios como para productores */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.02); /* Muy transparente */
+  backdrop-filter: blur(30px); /* Mucho blur para legibilidad */
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 40px 80px rgba(0,0,0,0.5), /* Sombra profunda */
+    inset 0 0 20px rgba(255,255,255,0.05); /* Brillo interno */
+}
+
+.text-glow {
+  text-shadow: 0 0 15px rgba(217, 70, 239, 0.5);
+}
