@@ -3,16 +3,22 @@
 import React from "react";
 import { ArrowLeft, FileText, Gavel, AlertTriangle, CreditCard, Users, ShieldAlert } from "lucide-react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+// IMPORTANTE: Importamos 'Variants' aquí también
+import { motion, Variants } from "framer-motion";
 
 export default function TermsPage() {
-  const containerVariants = {
+  
+  // AÑADIDO: ': Variants' para corregir el error de tipo
+  const containerVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+    visible: { 
+      opacity: 1, 
+      y: 0, 
+      transition: { duration: 0.6, ease: "easeOut" } 
+    },
   };
 
   return (
-    // Ajuste responsivo: py-4 en movil, py-10 en desktop
     <div className="min-h-screen bg-black text-white font-sans selection:bg-neonPink/30 relative overflow-x-hidden flex flex-col items-center py-4 md:py-10">
       
       <div className="fixed inset-0 z-0 pointer-events-none">
@@ -32,7 +38,6 @@ export default function TermsPage() {
         variants={containerVariants} 
         initial="hidden" 
         animate="visible" 
-        // DESKTOP: Ocupa todo el ancho (w-[98vw])
         className="w-full md:w-[98vw] relative z-10 flex flex-col items-center"
       >
         <div className="w-[92%] md:w-full md:px-8 mb-4 md:mb-6">
