@@ -3,16 +3,22 @@
 import React from "react";
 import { ArrowLeft, Lock, Database, Server, Eye, Globe, Cookie, ShieldCheck } from "lucide-react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+// IMPORTANTE: Importamos 'Variants' para corregir el error de tipo
+import { motion, Variants } from "framer-motion";
 
 export default function PrivacyPage() {
-  const containerVariants = {
+  
+  // AÑADIDO: ': Variants' para que TypeScript entienda los tipos de animación
+  const containerVariants: Variants = {
     hidden: { opacity: 0, scale: 0.98 },
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: "easeOut" } },
+    visible: { 
+      opacity: 1, 
+      scale: 1, 
+      transition: { duration: 0.5, ease: "easeOut" } 
+    },
   };
 
   return (
-    // P-2 en movil para maximizar espacio, P-10 en desktop
     <div className="min-h-screen bg-black text-white font-sans selection:bg-neonPurple/30 relative overflow-x-hidden flex flex-col items-center py-4 md:py-10">
       
       {/* --- Fondo Animado --- */}
@@ -33,7 +39,6 @@ export default function PrivacyPage() {
         variants={containerVariants} 
         initial="hidden" 
         animate="visible" 
-        // CAMBIO DESKTOP: w-[98vw] para cubrir casi toda la pantalla
         className="w-full md:w-[98vw] relative z-10 flex flex-col items-center"
       >
         {/* Botón Volver alineado al contenedor */}
@@ -44,7 +49,6 @@ export default function PrivacyPage() {
         </div>
         
         {/* Panel de Vidrio */}
-        {/* MOVIL: p-4 y w-[95%] para ser compacto. DESKTOP: p-16 y w-full para ser inmersivo */}
         <div className="glass-panel w-[95%] md:w-full p-4 md:p-16 rounded-2xl md:rounded-[3rem] border border-white/10 bg-black/70 backdrop-blur-3xl shadow-[0_0_60px_rgba(139,92,246,0.15)]">
           
           {/* Header */}
@@ -62,7 +66,6 @@ export default function PrivacyPage() {
           </div>
           
           {/* Contenido Legal */}
-          {/* MOVIL: space-y-6 para compactar. DESKTOP: space-y-16 para respirar */}
           <div className="space-y-6 md:space-y-20 text-gray-300">
             
             {/* Intro */}
