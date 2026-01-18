@@ -18,25 +18,26 @@ export default function TermsPage() {
           <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform"/> Volver al inicio
         </Link>
         
-        <div className="glass-panel p-10 md:p-16 rounded-[3rem] border border-white/10 bg-white/5 backdrop-blur-2xl">
-          <div className="flex items-center gap-6 mb-12 border-b border-white/10 pb-8">
+        {/* Padding responsivo: p-6 en movil, p-16 en escritorio */}
+        <div className="glass-panel p-6 md:p-16 rounded-[2rem] md:rounded-[3rem] border border-white/10 bg-white/5 backdrop-blur-2xl">
+          <div className="flex flex-col md:flex-row items-start md:items-center gap-6 mb-12 border-b border-white/10 pb-8">
              <div className="p-5 rounded-3xl bg-neonPurple/20 border border-neonPurple/50"><FileText size={40} className="text-neonPurple"/></div>
              <div>
-                <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-2">Términos de Servicio</h1>
+                <h1 className="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-2">Términos de Servicio</h1>
                 <p className="text-gray-400">Las reglas del juego.</p>
              </div>
           </div>
           
           <div className="prose prose-invert prose-lg max-w-none text-gray-300 space-y-12">
-            <p className="text-xl leading-relaxed font-light">Bienvenido a <span className="text-white font-bold">DyzGO</span>. Al usar nuestra plataforma, aceptas estas condiciones. Nuestro objetivo es crear la mejor experiencia de vida nocturna, segura y justa.</p>
+            <p className="text-lg md:text-xl leading-relaxed font-light">Bienvenido a <span className="text-white font-bold">DyzGO</span>. Al usar nuestra plataforma, aceptas estas condiciones. Nuestro objetivo es crear la mejor experiencia de vida nocturna, segura y justa.</p>
             
             <div>
-                <h3 className="text-white text-2xl font-bold mb-4 flex items-center gap-3"><span className="text-neonPink">01.</span> Uso de la Plataforma</h3>
+                <h3 className="text-white text-xl md:text-2xl font-bold mb-4 flex items-center gap-3"><span className="text-neonPink">01.</span> Uso de la Plataforma</h3>
                 <p>DyzGO actúa como intermediario entre Organizadores (Productoras) y Usuarios. No organizamos los eventos directamente, pero garantizamos la validez tecnológica de tu acceso.</p>
             </div>
 
             <div>
-                <h3 className="text-white text-2xl font-bold mb-4 flex items-center gap-3"><span className="text-neonPink">02.</span> Tickets y QR Dinámico</h3>
+                <h3 className="text-white text-xl md:text-2xl font-bold mb-4 flex items-center gap-3"><span className="text-neonPink">02.</span> Tickets y QR Dinámico</h3>
                 <p>Tu seguridad es clave. Los tickets son digitales y personales. El código QR se regenera constantemente. <strong>Queda prohibido:</strong></p>
                 <ul className="list-disc pl-5 space-y-2 mt-4 text-gray-400">
                    <li>Intentar revender tickets fuera del Marketplace oficial.</li>
@@ -45,12 +46,12 @@ export default function TermsPage() {
             </div>
 
             <div>
-                <h3 className="text-white text-2xl font-bold mb-4 flex items-center gap-3"><span className="text-neonPink">03.</span> Marketplace y Reventa</h3>
+                <h3 className="text-white text-xl md:text-2xl font-bold mb-4 flex items-center gap-3"><span className="text-neonPink">03.</span> Marketplace y Reventa</h3>
                 <p>Si no asistes, puedes vender tu entrada legalmente en nuestra app. Al venderse, tu ticket se destruye y se crea uno nuevo para el comprador. DyzGO cobra una pequeña comisión por servicio para garantizar la seguridad de la transacción.</p>
             </div>
 
             <div>
-                <h3 className="text-white text-2xl font-bold mb-4 flex items-center gap-3"><span className="text-neonPink">04.</span> Política de Reembolsos</h3>
+                <h3 className="text-white text-xl md:text-2xl font-bold mb-4 flex items-center gap-3"><span className="text-neonPink">04.</span> Política de Reembolsos</h3>
                 <p>Los reembolsos dependen de la política de cada Productora, excepto en caso de cancelación total del evento, donde DyzGO gestionará la devolución del valor del ticket (excluyendo cargos por servicio) según la ley vigente.</p>
             </div>
           </div>
