@@ -196,8 +196,8 @@ export default function DyzgoFinalVFinal() {
                </motion.div>
                <div className="mt-8 md:mt-20 flex flex-col lg:flex-row justify-between items-center lg:items-end w-full pb-4 gap-8 md:gap-12">
                   <p className="text-sm md:text-3xl font-light w-full max-w-sm md:max-w-2xl mx-auto md:mx-0 text-white/90 leading-tight text-center md:text-left">
-                      Tu entrada segura, tus amigos, tu noche. La app que esperabas para salir tranquilo.
-                      <br/><span className="text-neonPink font-bold">Sin estafas. Sin dramas.</span>
+                     Vive los mejores eventos, descubre fiestas según tus gustos y disfruta todo sin complicaciones en un solo lugar.
+                      <br/><span className="text-neonPink font-bold">Tú sin limites, productoras sin estrés.</span>
                   </p>
                   <div className="flex flex-col md:flex-row gap-4 w-full max-w-[280px] md:max-w-none md:w-auto justify-center md:justify-end">
                       <LiquidButton primary icon={<Smartphone size={24}/>} onClick={() => setModalOpen(true)}>Descargar</LiquidButton>
