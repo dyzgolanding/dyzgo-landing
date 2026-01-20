@@ -14,7 +14,7 @@ export default function PrivacyPage() {
   return (
     <div className="min-h-screen bg-black text-white font-sans selection:bg-neonPurple/30 relative overflow-x-hidden flex flex-col items-center justify-center py-4 md:py-8">
       
-      {/* --- Fondo Animado (Sutil) --- */}
+      {/* --- Fondo Animado --- */}
       <div className="fixed inset-0 z-0 pointer-events-none opacity-50">
         <div className="absolute top-[-10%] right-[-10%] w-[60vw] h-[60vw] bg-[#581c87]/20 blur-[100px] rounded-full" />
         <div className="absolute bottom-[-10%] left-[-10%] w-[60vw] h-[60vw] bg-[#db2777]/15 blur-[100px] rounded-full" />
@@ -24,7 +24,7 @@ export default function PrivacyPage() {
         variants={containerVariants} 
         initial="hidden" 
         animate="visible" 
-        // ANCHO EXTENDIDO PERO CONTENIDO: max-w-6xl
+        // DESKTOP: max-w-6xl para ancho controlado pero amplio (DASHBOARD)
         className="w-[95%] md:max-w-6xl relative z-10 flex flex-col items-center"
       >
         <div className="w-full mb-4 flex justify-start">
@@ -45,10 +45,10 @@ export default function PrivacyPage() {
                 <div>
                     <h1 className="text-xl md:text-3xl font-black uppercase tracking-tight text-white leading-none">Política de Privacidad</h1>
                     <p className="text-[10px] md:text-xs text-gray-400 font-medium mt-1">
-                      Protocolos de seguridad y manejo de datos. Transparencia total.
+                      Nivel de seguridad blindado. Transparencia en datos y biometría.
                     </p>
                 </div>
-                <span className="text-[9px] text-gray-600 font-mono uppercase tracking-widest border border-white/10 px-2 py-1 rounded">Rev: Ene-2026</span>
+                <span className="text-[9px] text-gray-600 font-mono uppercase tracking-widest border border-white/10 px-2 py-1 rounded">Rev: 2026</span>
              </div>
           </div>
           
@@ -57,39 +57,40 @@ export default function PrivacyPage() {
             
             {/* Intro (Ancho completo) */}
             <div className="md:col-span-2 text-[11px] md:text-sm text-gray-400 leading-snug mb-2">
-              DyzGO Inc. protege tu identidad digital. Al usar la plataforma, aceptas estas prácticas de recopilación y uso de datos mínimos necesarios.
+              Para que DyzGO funcione con su nivel de seguridad blindado, recopilamos datos esenciales para validar identidad y prevenir el mercado negro.
             </div>
 
             {/* Columna Izquierda */}
             <div className="space-y-4">
                 <section>
                   <h3 className="text-white text-xs md:text-sm font-bold flex items-center gap-2 mb-2">
-                    <Database className="text-neonPurple w-3 h-3" /> 1. Información Recopilada
+                    <Database className="text-neonPurple w-3 h-3" /> 1. Datos que Recopilamos
                   </h3>
                   <div className="grid grid-cols-2 gap-2">
                     <div className="bg-white/5 p-2 rounded border border-white/5 text-[10px]">
-                      <strong className="text-white block">Identidad</strong>
-                      RUT, Nombre, Edad (+18).
+                      <strong className="text-white block">Identificación</strong>
+                      Nombre, RUT/DNI, Correo, Teléfono.
                     </div>
                     <div className="bg-white/5 p-2 rounded border border-white/5 text-[10px]">
-                      <strong className="text-white block">Financiero</strong>
-                      Tokenizado (No guardamos tarjeta).
+                      <strong className="text-white block">Biometría</strong>
+                      FaceID para acceso y anti-clonación.
                     </div>
                     <div className="bg-white/5 p-2 rounded border border-white/5 text-[10px] col-span-2">
-                      <strong className="text-white block">Técnico</strong>
-                      IP, Dispositivo, Geo (Opcional).
+                      <strong className="text-white block">Dispositivo & Hash</strong>
+                      ID dispositivo y SO para seguridad única.
                     </div>
                   </div>
                 </section>
 
                 <section>
                   <h3 className="text-white text-xs md:text-sm font-bold flex items-center gap-2 mb-2">
-                    <Eye className="text-neonPurple w-3 h-3" /> 3. Divulgación (Terceros)
+                    <Eye className="text-neonPurple w-3 h-3" /> 3. Compartir con Terceros
                   </h3>
                   <p className="text-[10px] md:text-xs leading-relaxed text-gray-400 text-justify">
-                    <strong>Productoras:</strong> Solo reciben Nombre/RUT para listas de acceso. Prohibido marketing.
-                    <br/><strong>Proveedores:</strong> AWS (Nube) y Stripe (Pagos).
-                    <br/><strong>Legal:</strong> Solo bajo orden judicial.
+                    <strong>No vendemos datos.</strong> Solo compartimos lo estrictamente necesario con:
+                    <br/><strong>Organizadores:</strong> Lista de invitados y control de acceso.
+                    <br/><strong>Pagos:</strong> Procesadores certificados (Stripe/MercadoPago).
+                    <br/><strong>Autoridades:</strong> Solo bajo requerimiento legal formal.
                   </p>
                 </section>
             </div>
@@ -98,31 +99,31 @@ export default function PrivacyPage() {
             <div className="space-y-4">
                 <section>
                   <h3 className="text-white text-xs md:text-sm font-bold flex items-center gap-2 mb-2">
-                    <Server className="text-neonPurple w-3 h-3" /> 2. Uso de Datos
+                    <Server className="text-neonPurple w-3 h-3" /> 2. Uso de la Información
                   </h3>
                   <ul className="list-disc pl-4 space-y-1 text-[10px] md:text-xs text-gray-400">
-                    <li>Generación de <strong>Hash IDs</strong> y QR dinámicos (Acceso).</li>
-                    <li>Seguridad Anti-fraude y detección de bots.</li>
-                    <li>Notificaciones críticas (Cambios de evento).</li>
-                    <li>Funciones sociales (NameDrop) iniciadas por usuario.</li>
+                    <li>Procesar compra y entrega de tickets digitales.</li>
+                    <li>Prevención de fraude y mercado negro.</li>
+                    <li>Gestión de sistema de Ranking y XP.</li>
+                    <li>Facilitar transferencias seguras (NFC).</li>
                   </ul>
                 </section>
 
                 <div className="grid grid-cols-2 gap-3">
                    <section>
                       <h3 className="text-white text-xs md:text-sm font-bold flex items-center gap-2 mb-1">
-                        <Cookie className="text-neonPurple w-3 h-3" /> 4. Cookies
+                        <Cookie className="text-neonPurple w-3 h-3" /> 4. Seguridad
                       </h3>
                       <p className="text-[10px] text-gray-400 leading-snug">
-                        Sesión y seguridad. Necesarias para el funcionamiento de la App.
+                        Cifrado SSL y protocolos avanzados. Ninguna transmisión es 100% segura.
                       </p>
                    </section>
                    <section>
                       <h3 className="text-white text-xs md:text-sm font-bold flex items-center gap-2 mb-1">
-                        <Globe className="text-neonPurple w-3 h-3" /> 5. Global
+                        <Globe className="text-neonPurple w-3 h-3" /> 5. Eliminación
                       </h3>
                       <p className="text-[10px] text-gray-400 leading-snug">
-                        Procesamiento en servidores seguros (EE.UU.) bajo estándares globales.
+                        Solicita borrado total en: Perfil &gt; Seguridad &gt; Eliminar Cuenta.
                       </p>
                    </section>
                 </div>
@@ -133,12 +134,12 @@ export default function PrivacyPage() {
                   </h3>
                   <div className="flex gap-4">
                      <div className="flex-1">
-                        <h4 className="text-neonPurple font-bold text-[10px] mb-0.5">Borrar Cuenta</h4>
-                        <p className="text-[9px] text-gray-400">Eliminación total desde la App.</p>
+                        <h4 className="text-neonPurple font-bold text-[10px] mb-0.5">Control</h4>
+                        <p className="text-[9px] text-gray-400">Acceder, Rectificar, Cancelar u Oponerse.</p>
                      </div>
                      <div className="flex-1">
-                        <h4 className="text-neonPurple font-bold text-[10px] mb-0.5">Exportar</h4>
-                        <p className="text-[9px] text-gray-400">Solicita copia de tus datos.</p>
+                        <h4 className="text-neonPurple font-bold text-[10px] mb-0.5">Normativa</h4>
+                        <p className="text-[9px] text-gray-400">Cumplimiento Apple/Google y leyes locales.</p>
                      </div>
                   </div>
                 </section>
@@ -151,7 +152,7 @@ export default function PrivacyPage() {
                DyzGO Inc. © 2026.
              </p>
              <p className="text-gray-500 text-[9px] md:text-xs font-sans">
-               Contacto: <span className="text-neonPurple hover:underline cursor-pointer">privacy@dyzgo.com</span>
+               Legal: <span className="text-neonPurple hover:underline cursor-pointer">legal@dyzgo.com</span>
              </p>
           </div>
         </div>
