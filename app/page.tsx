@@ -109,7 +109,8 @@ const SpotlightCard = ({ children, className }: any) => {
 };
 
 const LiquidButton = ({ children, icon, primary, onClick }: any) => (
-  <motion.button onClick={onClick} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className={`relative w-full px-8 py-2.5 md:px-10 md:py-5 font-bold text-sm md:text-xl flex items-center justify-center gap-3 rounded-full overflow-hidden transition-all group ${primary ? 'bg-[#d946ef] text-black shadow-[0_0_30px_rgba(217,70,239,0.2)] md:shadow-[0_0_40px_rgba(217,70,239,0.3)]' : 'glass-panel text-white hover:border-neonPink/50'}`}>
+  // CAMBIO: bg-white restablecido para el botón primario
+  <motion.button onClick={onClick} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className={`relative w-full px-8 py-2.5 md:px-10 md:py-5 font-bold text-sm md:text-xl flex items-center justify-center gap-3 rounded-full overflow-hidden transition-all group ${primary ? 'bg-white text-black shadow-[0_0_30px_rgba(255,255,255,0.2)] md:shadow-[0_0_40px_rgba(255,255,255,0.3)]' : 'glass-panel text-white hover:border-neonPink/50'}`}>
     {primary && <div className="absolute inset-0 bg-gradient-to-r from-neonPink to-neonPurple opacity-0 group-hover:opacity-100 transition-opacity duration-500" />}
     <span className="relative z-10">{children}</span>
     <span className="relative z-10 group-hover:translate-x-1 transition-transform">{icon}</span>
@@ -196,7 +197,7 @@ export default function DyzgoFinalVFinal() {
                </motion.div>
                <div className="mt-8 md:mt-20 flex flex-col lg:flex-row justify-between items-center lg:items-end w-full pb-4 gap-8 md:gap-12">
                   
-                  {/* HERO TEXT: max-w-[95%] para 3 líneas en móvil (2 blancas + 1 rosa) */}
+                  {/* HERO TEXT: Manteniendo los ajustes perfectos: max-w 95% y span block */}
                   <p className="text-sm md:text-2xl lg:text-3xl font-light w-full max-w-[95%] md:max-w-[800px] mx-auto md:mx-0 text-white/90 leading-tight text-center md:text-left">
                      Vive los mejores eventos, descubre fiestas según tus gustos y disfruta todo sin complicaciones en un solo lugar.
                      <span className="block text-neonPink font-bold mt-0.5 md:mt-0">
@@ -231,12 +232,11 @@ export default function DyzgoFinalVFinal() {
                </SpotlightCard>
            </div>
 
-           {/* DECIDE RAPIDO - FIXED DESKTOP TAG WIDTH */}
+           {/* DECIDE RAPIDO */}
            <div className="flex flex-col lg:flex-row-reverse gap-6 md:gap-16 items-center">
                <div className="lg:w-2/5 order-1 lg:order-1 flex flex-col items-start text-left w-full">
                  <h2 className="text-2xl md:text-7xl font-black mb-3 md:mb-8 text-white uppercase tracking-tighter leading-none">Decide en <span className="text-neonPurple">segundos.</span></h2>
                  <p className="text-[11px] md:text-lg text-gray-300 leading-relaxed mb-4 md:mb-10 w-full max-w-lg">Filtros inteligentes para encontrar tu evento ideal, sin distracciones ni categorías que no van contigo.</p>
-                 {/* Aquí se aplicó el cambio: md:max-w-xl para permitir que el texto largo quepa en una línea en escritorio */}
                  <div className="grid grid-cols-2 gap-2 md:gap-4 w-full max-w-sm md:max-w-xl"><FeatureTag text="Ve donde van tus amigos" /><FeatureTag text="Eventos Guardados" /><FeatureTag text="Notificaciones Push" /><FeatureTag text="Compra Rápida" /></div>
                </div>
                <SpotlightCard className="w-full lg:w-3/5 h-[180px] md:h-[500px] border border-white/10 flex items-center justify-center p-4 md:p-12 bg-white/5 backdrop-blur-xl order-2 lg:order-2">
