@@ -23,7 +23,7 @@ export default function TermsPage() {
         variants={containerVariants} 
         initial="hidden" 
         animate="visible" 
-        // ANCHO EXTENDIDO PERO CONTENIDO: max-w-6xl
+        // DESKTOP: max-w-6xl para ancho controlado pero amplio (DASHBOARD)
         className="w-[95%] md:max-w-6xl relative z-10 flex flex-col items-center"
       >
         <div className="w-full mb-4 flex justify-start">
@@ -44,7 +44,7 @@ export default function TermsPage() {
                 <div>
                     <h1 className="text-xl md:text-3xl font-black uppercase tracking-tight text-white leading-none">Términos de Uso</h1>
                     <p className="text-[10px] md:text-xs text-gray-400 font-medium mt-1">
-                      Acuerdo legal entre el Usuario y DyzGO Inc. Normas de la comunidad.
+                      Acuerdo legal entre el Usuario y DyzGO. Normas de la comunidad y uso.
                     </p>
                 </div>
                 <span className="text-[9px] text-gray-600 font-mono uppercase tracking-widest border border-white/10 px-2 py-1 rounded">Vigencia: 2026</span>
@@ -58,24 +58,24 @@ export default function TermsPage() {
             <div className="space-y-4">
                 <section>
                   <h3 className="text-white text-xs md:text-sm font-bold flex items-center gap-2 mb-2">
-                    <Gavel className="text-neonPink w-3 h-3" /> 1. Naturaleza del Servicio
+                    <Gavel className="text-neonPink w-3 h-3" /> 1. Requisitos de Usuario
                   </h3>
                   <div className="bg-white/5 p-3 rounded border border-white/5 text-[10px] md:text-xs leading-relaxed text-gray-400 text-justify">
-                    DyzGO es una plataforma intermediaria (Marketplace).
-                    <br/><strong className="text-white">No organizamos eventos.</strong> No somos responsables por cancelaciones, calidad del show o seguridad física en el recinto. Solo garantizamos la validez del ticket.
+                    Debes tener <strong className="text-white">+18 años</strong>. Garantizas que tus datos (Nombre, RUT, Biometría) son reales.
+                    <br/>Las cuentas son personales e intransferibles. DyzGO puede solicitar verificación (KYC).
                   </div>
                 </section>
 
                 <section>
                   <h3 className="text-white text-xs md:text-sm font-bold flex items-center gap-2 mb-2">
-                    <CreditCard className="text-neonPink w-3 h-3" /> 3. Pagos & Reventa
+                    <CreditCard className="text-neonPink w-3 h-3" /> 3. Reventa & Reembolsos
                   </h3>
                   <div className="text-[10px] md:text-xs leading-relaxed text-gray-400 text-justify space-y-2">
                     <p>
-                      <strong>Service Fee:</strong> Comisión no reembolsable por uso de plataforma.
+                      <strong>Marketplace:</strong> Reventa segura permitida. DyzGO puede cobrar <i>Service Fee</i> no reembolsable.
                     </p>
                     <p>
-                      <strong>Marketplace:</strong> Reventa permitida <strong className="text-neonPink">solo en la App</strong>. Al vender, el ticket original muere y nace uno nuevo. Adiós estafas.
+                      <strong>Política:</strong> <strong className="text-neonPink">Ticket no reembolsable</strong> por arrepentimiento (usa el Marketplace). Si se cancela el evento, se devuelve el valor del ticket (excluyendo fee).
                     </p>
                   </div>
                 </section>
@@ -85,44 +85,41 @@ export default function TermsPage() {
             <div className="space-y-4">
                 <section>
                   <h3 className="text-white text-xs md:text-sm font-bold flex items-center gap-2 mb-2">
-                    <ShieldAlert className="text-neonPink w-3 h-3" /> 2. Sistema de Tickets
+                    <ShieldAlert className="text-neonPink w-3 h-3" /> 2. Funcionamiento Ticket
                   </h3>
                   <ul className="space-y-1.5">
                     <li className="bg-white/5 p-2 rounded border border-white/5 text-[10px] md:text-xs flex justify-between">
-                      <strong className="text-white">Licencia</strong> <span>Digital y personal.</span>
+                      <strong className="text-white">Licencia</strong> <span>Acceso revocable al evento.</span>
                     </li>
                     <li className="bg-white/5 p-2 rounded border border-white/5 text-[10px] md:text-xs flex justify-between">
-                      <strong className="text-white">QR Dinámico</strong> <span>Rota cada 15s.</span>
+                      <strong className="text-white">QR Dinámico</strong> <span>Actualización constante.</span>
                     </li>
                     <li className="bg-white/5 p-2 rounded border border-white/5 text-[10px] md:text-xs text-center text-neonPink font-bold">
-                      Capturas de pantalla INVÁLIDAS.
+                      SCREENSHOTS NO VÁLIDOS
                     </li>
                   </ul>
                 </section>
 
                 <section>
                   <h3 className="text-white text-xs md:text-sm font-bold flex items-center gap-2 mb-2">
-                    <Users className="text-neonPink w-3 h-3" /> 4. Sanciones
+                    <Users className="text-neonPink w-3 h-3" /> 4. Social & Conducta
                   </h3>
                   <div className="grid grid-cols-2 gap-2">
                      <div className="p-2 rounded bg-red-900/10 border border-red-500/20 text-red-200 text-[9px] md:text-[10px] font-bold flex items-center gap-1.5">
-                        <AlertTriangle size={10}/> Fraude Tarjetas
+                        <AlertTriangle size={10}/> Acoso/Toxicidad
                      </div>
                      <div className="p-2 rounded bg-red-900/10 border border-red-500/20 text-red-200 text-[9px] md:text-[10px] font-bold flex items-center gap-1.5">
-                        <AlertTriangle size={10}/> Hacking App
+                        <AlertTriangle size={10}/> Lenguaje Ofensivo
                      </div>
-                     <div className="p-2 rounded bg-red-900/10 border border-red-500/20 text-red-200 text-[9px] md:text-[10px] font-bold flex items-center gap-1.5">
-                        <AlertTriangle size={10}/> Reventa Masiva
-                     </div>
-                     <div className="p-2 rounded bg-red-900/10 border border-red-500/20 text-red-200 text-[9px] md:text-[10px] font-bold flex items-center gap-1.5">
-                        <AlertTriangle size={10}/> Acoso Social
+                     <div className="p-2 rounded bg-white/5 border border-white/10 text-gray-300 text-[9px] md:text-[10px] font-bold flex items-center gap-1.5 col-span-2 justify-center">
+                        XP y Ranking son activos virtuales sin valor monetario.
                      </div>
                   </div>
                 </section>
 
                 <section>
                    <h3 className="text-white text-xs md:text-sm font-bold mb-1">5. Propiedad Intelectual</h3>
-                   <p className="text-[10px] text-gray-400 leading-snug">El código, diseño y marca "DyzGO" son propiedad exclusiva de DyzGO Inc. Prohibida copia.</p>
+                   <p className="text-[10px] text-gray-400 leading-snug">Diseño "Liquid Glass", software y marcas son propiedad exclusiva de DyzGO Inc.</p>
                 </section>
             </div>
 
