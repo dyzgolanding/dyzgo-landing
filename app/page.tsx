@@ -109,7 +109,7 @@ const SpotlightCard = ({ children, className }: any) => {
 };
 
 const LiquidButton = ({ children, icon, primary, onClick }: any) => (
-  // CAMBIO: bg-white restablecido para el botón primario
+  // BOTÓN BLANCO para primario
   <motion.button onClick={onClick} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className={`relative w-full px-8 py-2.5 md:px-10 md:py-5 font-bold text-sm md:text-xl flex items-center justify-center gap-3 rounded-full overflow-hidden transition-all group ${primary ? 'bg-white text-black shadow-[0_0_30px_rgba(255,255,255,0.2)] md:shadow-[0_0_40px_rgba(255,255,255,0.3)]' : 'glass-panel text-white hover:border-neonPink/50'}`}>
     {primary && <div className="absolute inset-0 bg-gradient-to-r from-neonPink to-neonPurple opacity-0 group-hover:opacity-100 transition-opacity duration-500" />}
     <span className="relative z-10">{children}</span>
@@ -197,10 +197,14 @@ export default function DyzgoFinalVFinal() {
                </motion.div>
                <div className="mt-8 md:mt-20 flex flex-col lg:flex-row justify-between items-center lg:items-end w-full pb-4 gap-8 md:gap-12">
                   
-                  {/* HERO TEXT: Manteniendo los ajustes perfectos: max-w 95% y span block */}
-                  <p className="text-sm md:text-2xl lg:text-3xl font-light w-full max-w-[95%] md:max-w-[800px] mx-auto md:mx-0 text-white/90 leading-tight text-center md:text-left">
+                  {/* HERO TEXT AJUSTADO:
+                      - leading-snug: Espaciado uniforme (mismo espacio) entre las 3 líneas en móvil.
+                      - Sin márgenes negativos extraños.
+                      - text-balance y tracking-tighter en móvil aseguran el quiebre correcto.
+                  */}
+                  <p className="text-sm tracking-tighter md:tracking-normal md:text-3xl lg:text-4xl font-light w-[95%] md:w-full md:max-w-4xl mx-auto md:mx-0 text-white/90 leading-snug md:leading-tight text-center md:text-left text-balance">
                      Vive los mejores eventos, descubre fiestas según tus gustos y disfruta todo sin complicaciones en un solo lugar.
-                     <span className="block text-neonPink font-bold mt-0.5 md:mt-0">
+                     <span className="block text-neonPink font-bold md:mt-2">
                         Tú sin limites, productoras sin estrés.
                      </span>
                   </p>
@@ -284,7 +288,7 @@ export default function DyzgoFinalVFinal() {
                      <motion.div whileHover={{ y: -10 }} className="w-full max-w-sm glass-panel rounded-2xl md:rounded-[2rem] p-4 md:p-8 shadow-2xl border border-white/20 backdrop-blur-3xl bg-white/[0.05] scale-[0.8] md:scale-100">
                          <div className="flex items-center gap-3 md:gap-4 mb-3 md:mb-8">
                             <div className="w-10 h-10 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-neonPink to-neonPurple p-[2px] relative flex-shrink-0">
-                               <div className="w-full h-full rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center overflow-hidden"><Crown size={18} className="text-white md:w-8 md:h-8" /></div>
+                                <div className="w-full h-full rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center overflow-hidden"><Crown size={18} className="text-white md:w-8 md:h-8" /></div>
                             </div>
                             <div><div className="text-base md:text-2xl font-bold text-white">Aprendiz</div><div className="text-neonPink font-bold tracking-widest text-[9px] md:text-xs">Nivel 2</div></div>
                          </div>
