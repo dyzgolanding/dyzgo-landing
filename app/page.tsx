@@ -198,15 +198,14 @@ export default function DyzgoFinalVFinal() {
                <div className="mt-8 md:mt-20 flex flex-col lg:flex-row justify-between items-center lg:items-end w-full pb-4 gap-8 md:gap-12">
                   
                   {/* HERO TEXT AJUSTADO:
-                      - leading-snug: Espaciado uniforme (mismo espacio) entre las 3 líneas en móvil.
-                      - Sin márgenes negativos extraños.
-                      - text-balance y tracking-tighter en móvil aseguran el quiebre correcto.
+                      - Se añadió <br className="hidden md:block" /> para forzar 2 líneas en desktop.
+                      - Se eliminó md:mt-2 del span rosado para igualar el espaciado entre todas las líneas.
                   */}
                   <p className="text-sm tracking-tighter md:tracking-normal md:text-3xl lg:text-4xl font-light w-[95%] md:w-full md:max-w-4xl mx-auto md:mx-0 text-white/90 leading-snug md:leading-tight text-center md:text-left text-balance">
-                     Vive los mejores eventos, descubre fiestas según tus gustos y disfruta todo sin complicaciones en un solo lugar.
-                     <span className="block text-neonPink font-bold md:mt-2">
+                      Vive los mejores eventos, descubre fiestas según tus gustos <br className="hidden md:block" /> y disfruta todo sin complicaciones en un solo lugar.
+                      <span className="block text-neonPink font-bold">
                         Tú sin limites, productoras sin estrés.
-                     </span>
+                      </span>
                   </p>
 
                   <div className="flex flex-col md:flex-row gap-4 w-full max-w-[280px] md:max-w-none md:w-auto justify-center md:justify-end">
